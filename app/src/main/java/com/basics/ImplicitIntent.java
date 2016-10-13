@@ -48,10 +48,10 @@ public class ImplicitIntent extends Activity implements View.OnClickListener {
                 break;
 
             case R.id.email:
-                String[] too = {"moumitadeymishra@gmail.com"};
+                String[] to = {"moumitadeymishra@gmail.com"};
                 Intent intentEmail = new Intent(android.content.Intent.ACTION_SEND);
                 intentEmail.setData(Uri.parse("mailto:"));
-                intentEmail.putExtra(Intent.EXTRA_EMAIL, too);
+                intentEmail.putExtra(Intent.EXTRA_EMAIL, to);
                 intentEmail.putExtra(Intent.EXTRA_SUBJECT, "Testing mailing System through Intent");
                 intentEmail.putExtra(Intent.EXTRA_TEXT, "Hi, I was just checking whether an email can be send to you via Intent.");
                 intentEmail.setType("message/rfc822");
